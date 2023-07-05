@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="DapperExtensions" Version="1.6.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
+

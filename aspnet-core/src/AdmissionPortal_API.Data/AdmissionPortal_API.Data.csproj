@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdmissionPortal_APIReference Include="..\AdmissionPortal_API.Domain\AdmissionPortal_API.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdmissionPortal_API.Domain\AdmissionPortal_API.Domain.csproj" />
+    <ProjectReference Include="..\AdmissionPortal_API.Utility\AdmissionPortal_API.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+

@@ -1,0 +1,14 @@
+before_script:
+  - docker info
+
+deploy_develop:
+  script:
+    
+    - docker build -t admissionportalapi .
+    - docker rm -f admissionportalapi
+    - docker run -d --name admissionportalapi --restart always -p 9021:80 admissionportalapi 
+##
+  tags: 
+    - development
+  only:
+    - development

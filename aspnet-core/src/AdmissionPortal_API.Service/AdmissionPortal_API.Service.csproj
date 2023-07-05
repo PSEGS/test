@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdmissionPortal_APIReference Include="..\AdmissionPortal_API.Data\AdmissionPortal_API.Data.csproj" />
+    <AdmissionPortal_APIReference Include="..\AdmissionPortal_API.Domain\AdmissionPortal_API.Domain.csproj" />
+    <AdmissionPortal_APIReference Include="..\AdmissionPortal_API.Utility\AdmissionPortal_API.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="5.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdmissionPortal_API.Data\AdmissionPortal_API.Data.csproj" />
+    <ProjectReference Include="..\AdmissionPortal_API.Domain\AdmissionPortal_API.Domain.csproj" />
+    <ProjectReference Include="..\AdmissionPortal_API.Utility\AdmissionPortal_API.Utility.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+

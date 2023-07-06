@@ -159,7 +159,7 @@ namespace AdmissionPortal_API.Web
 
             app.Use(async (context, next) =>
             {
-                context.Response.Headers.Add("App-Version", "1.0.7");
+                context.Response.Headers.Add("App-Version", "1.0.3");
                 context.Response.Headers.Add("Access-Control-Expose-Headers", "App-Version");
 
                 await next();

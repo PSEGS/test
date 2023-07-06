@@ -63,7 +63,12 @@ namespace AdmissionPortal_API.Domain.Model
         public string CollegeName { get; set; }
     }
 
-   
+    public class AllCollegesISLOCK
+    {
+        public int CollegeId { get; set; }
+        public string CollegeName { get; set; }
+    }
+
 
 }
 

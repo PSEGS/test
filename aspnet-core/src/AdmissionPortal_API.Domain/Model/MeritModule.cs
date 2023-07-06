@@ -203,6 +203,9 @@ namespace AdmissionPortal_API.Domain.Model
         public int SubjectId { get; set; }
         public string SubjectName { get; set; }
         public int PracticalFee { get; set; }
+        public bool IsselffinaceAcc { get; set; }
+        public bool IsRegularAcc { get; set; }
+
 
     }
     public class StudentCourseFee

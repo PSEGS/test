@@ -232,59 +232,59 @@ namespace AdmissionPortal_API.Service.Service
                     serviceResult.ResultData = _result;
                     if (serviceResult.ResultData != null)
                     {
-                       // bunty comment this for test producation data
-                                               switch (type)
-                        {
-                            case (int)VerificationSectionType.PersonalDetails:
-                                if (serviceResult.ResultData.PhotographRef != null)
-                                {
-                                    var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.PhotographRef);
-                                    serviceResult.ResultData.Photograph = photo.Result.ResultData.ToString();
-                                }
-                                if (serviceResult.ResultData.SignatureRef != null)
-                                {
-                                    var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.SignatureRef);
-                                    serviceResult.ResultData.Signature = photo.Result.ResultData.ToString();
-                                }
-                                if (serviceResult.ResultData.MetricCertificateRef != null)
-                                {
-                                    var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.MetricCertificateRef);
-                                    serviceResult.ResultData.MetricCertificate = photo.Result.ResultData.ToString();
-                                }
-                                break;
-                            case (int)(VerificationSectionType.AcademicDetails):
-                                if (serviceResult.ResultData.AcademicDetails.Certificate != null)
-                                {
-                                    var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.AcademicDetails.Certificate);
-                                    serviceResult.ResultData.AcademicDetails.Certificate = photo.Result.ResultData.ToString();
-                                }
-                                break;
-                            case (int)(VerificationSectionType.Weightages):
-                                for (int i = 0; i < serviceResult.ResultData.Count; i++)
-                                {
-                                    if (serviceResult.ResultData[i].DocmentBlobReference != null)
-                                    {
-                                        var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData[i].DocmentBlobReference);
-                                        serviceResult.ResultData[i].Image = photo.Result.ResultData.ToString();
-                                    }
-                                }
-                                break;
-                            case (int)(VerificationSectionType.ReservationDetails):
-                                for (int i = 0; i < serviceResult.ResultData.Count; i++)
-                                {
-                                    if (serviceResult.ResultData[i].ImageRef != null)
-                                    {
-                                        var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData[i].ImageRef);
-                                        serviceResult.ResultData[i].Image = photo.Result.ResultData.ToString();
-                                    }
+                        //bunty comment this for test producation data
+                        //switch (type)
+                        //{
+                        //    case (int)VerificationSectionType.PersonalDetails:
+                        //        if (serviceResult.ResultData.PhotographRef != null)
+                        //        {
+                        //            var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.PhotographRef);
+                        //            serviceResult.ResultData.Photograph = photo.Result.ResultData.ToString();
+                        //        }
+                        //        if (serviceResult.ResultData.SignatureRef != null)
+                        //        {
+                        //            var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.SignatureRef);
+                        //            serviceResult.ResultData.Signature = photo.Result.ResultData.ToString();
+                        //        }
+                        //        if (serviceResult.ResultData.MetricCertificateRef != null)
+                        //        {
+                        //            var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.MetricCertificateRef);
+                        //            serviceResult.ResultData.MetricCertificate = photo.Result.ResultData.ToString();
+                        //        }
+                        //        break;
+                        //    case (int)(VerificationSectionType.AcademicDetails):
+                        //        if (serviceResult.ResultData.AcademicDetails.Certificate != null)
+                        //        {
+                        //            var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData.AcademicDetails.Certificate);
+                        //            serviceResult.ResultData.AcademicDetails.Certificate = photo.Result.ResultData.ToString();
+                        //        }
+                        //        break;
+                        //    case (int)(VerificationSectionType.Weightages):
+                        //        for (int i = 0; i < serviceResult.ResultData.Count; i++)
+                        //        {
+                        //            if (serviceResult.ResultData[i].DocmentBlobReference != null)
+                        //            {
+                        //                var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData[i].DocmentBlobReference);
+                        //                serviceResult.ResultData[i].Image = photo.Result.ResultData.ToString();
+                        //            }
+                        //        }
+                        //        break;
+                        //    case (int)(VerificationSectionType.ReservationDetails):
+                        //        for (int i = 0; i < serviceResult.ResultData.Count; i++)
+                        //        {
+                        //            if (serviceResult.ResultData[i].ImageRef != null)
+                        //            {
+                        //                var photo = _blobService.FetchBlobUsingFileReferenceType(blobAccessKey, containerName, serviceResult.ResultData[i].ImageRef);
+                        //                serviceResult.ResultData[i].Image = photo.Result.ResultData.ToString();
+                        //            }
 
-                                }
-                                break;
+                        //        }
+                        //        break;
 
-                            default:
-                                break;
+                        //    default:
+                        //        break;
 
-                        }
+                        //}
                         serviceResult.Message = MessageConfig.Success;
                         serviceResult.Status = true;
                         serviceResult.StatusCode = Convert.ToInt32(HttpStatusCode.OK);

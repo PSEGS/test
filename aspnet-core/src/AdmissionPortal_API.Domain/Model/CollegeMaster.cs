@@ -35,7 +35,7 @@ namespace AdmissionPortal_API.Domain.Model
         public string Password { get; set; }
         public string CollegeWebsite { get; set; }
         public string ShortName { get; set; }
-         public BankOptions BankDetails { get; set; }
+        public BankOptions BankDetails { get; set; }
         public string prospectusRef { get; set; }
 
 
@@ -57,12 +57,6 @@ namespace AdmissionPortal_API.Domain.Model
         public int FundTypeId { get; set; }
 
     }
-    public class AllCollegesISLOCK
-    {
-        public int CollegeId { get; set; }
-        public string CollegeName { get; set; }
-    }
-
     public class AllCollegesISLOCK
     {
         public int CollegeId { get; set; }

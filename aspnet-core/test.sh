@@ -21,6 +21,8 @@ else
     echo "Container ${CONTAINER_NAME} not found."
 fi
 
+# Path to the directory containing the Dockerfile
+DOCKERFILE_DIR="/var/lib/jenkins/workspace/test/aspnet-core"
 
 # Name of the Docker image to remove
 IMAGE_NAME="test"
